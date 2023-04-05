@@ -10,7 +10,17 @@ namespace Exercicio05
     {
         static void Main(string[] args)
         {
-            Esfera.CalculoEsfera();
+            Esfera esfera = new Esfera();
+
+            Console.WriteLine("- Calculo volume de uma Esfera -\n");
+
+            Console.WriteLine("Informe o raio: ");
+            esfera.raio = Convert.ToDouble(Console.ReadLine());
+
+
+            Console.WriteLine($"\nVolume da esfera é: {esfera.CalculoEsfera()}cm");
+
+            Console.ReadKey();
         }
     }
 }

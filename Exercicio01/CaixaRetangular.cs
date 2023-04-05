@@ -8,28 +8,14 @@ namespace Exercicio01
 {
     internal class CaixaRetangular
     {
-        public static double comprimento { get; set; }
-        public static double largura { get; set; }
-        public static double altura { get; set; }
+        public double comprimento { get; set; }
+        public double largura { get; set; }
+        public double altura { get; set; }
+        public double Volume { get; set; }
 
-        public static void CalculoCaixaRetangular()
+        public double CalcularCaixa()
         {
-            Console.WriteLine("- Calculo da caixa de um retângulo -\n");
-
-            Console.WriteLine("Informe o comprimento: ");
-            comprimento = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Informe a largura: ");
-            largura = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Informe o comprimento: ");
-            altura = Convert.ToDouble(Console.ReadLine());
-
-            double Volume = comprimento * largura * altura;
-
-            Console.WriteLine($"\nO volume da caixa é: {Volume} cm");
-
-            Console.ReadKey();
+            return Volume = comprimento * largura * altura;
         }
     }
 }

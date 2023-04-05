@@ -8,24 +8,16 @@ namespace Exercicio06
 {
     internal class ConversorCelsius
     {
-        public static double Fahrenheit { get; set; }
-        public static double Celsius { get; set; }
+        public double Fahrenheit { get; set; }
+        public double Celsius { get; set; }
 
 
-        public static void CalculoCelsiusParaFahrenheit()
+        public double CalculoCelsiusParaFahrenheit()
         {
-            Console.WriteLine("- Conversor de graus Celsius para graus Fahrenheit -\n");
-
-            Console.WriteLine("Informe os graus Celsius: ");
-            double Celsius = Convert.ToDouble(Console.ReadLine());
-
-            double Fahrenheit = (Celsius * 1.8) + 32;
-
+            Fahrenheit = (Celsius * 1.8) + 32;
             Fahrenheit = Math.Round(Fahrenheit, 2);
 
-            Console.WriteLine($"O grau Fahrenheit é: F° {Fahrenheit}");
-
-            Console.ReadKey();
+            return Fahrenheit;
         }
     }
 }

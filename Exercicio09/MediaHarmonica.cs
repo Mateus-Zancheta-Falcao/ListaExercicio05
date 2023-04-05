@@ -8,20 +8,15 @@ namespace Exercicio09
 {
     internal class MediaHarmonica
     {
-        public static int quantidadeDeNotas { get; set; }
-        public static double DivisãoNotas { get; set; }
-        public static double MediaFinal { get; set; }
-        public static double media { get; set; }
-        public static double nota { get; set; }
-        public static double MediaH { get; set; }
+        public int quantidadeDeNotas { get; set; }
+        public double DivisãoNotas { get; set; }
+        public double MediaFinal { get; set; }
+        public double media { get; set; }
+        public double nota { get; set; }
+        public double MediaH { get; set; }
 
-        public static void CalculoMediaHarmonica()
+        public double CalculoMediaHarmonica()
         {
-            Console.WriteLine("- Calculo média harmônica - \n");
-
-            Console.WriteLine("Informe a quantidade de notas: ");
-            quantidadeDeNotas = Convert.ToInt32(Console.ReadLine());
-
             for (int i = 0; i < quantidadeDeNotas; i++)
             {
                 Console.WriteLine("Informe uma nota: ");
@@ -33,9 +28,8 @@ namespace Exercicio09
 
             MediaH = quantidadeDeNotas / MediaFinal;
 
-            Console.WriteLine($"A média harmônica é: {MediaH}");
-
-            Console.ReadLine();
+            return MediaH;
+            
         }
     }
 }

@@ -10,7 +10,19 @@ namespace Exercicio08
     {
         static void Main(string[] args)
         {
-            Lata.CalculoLata();
+            Lata lata = new Lata();
+
+            Console.WriteLine("- Calculo volume de uma lata de óleo -\n");
+
+            Console.WriteLine("Informe o raio: ");
+            lata.raio = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Informe o a altura: ");
+            lata.altura = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine($"\nVolume da lata é: {lata.CalculoLata()}cm");
+
+            Console.ReadKey();
         }
     }
 }

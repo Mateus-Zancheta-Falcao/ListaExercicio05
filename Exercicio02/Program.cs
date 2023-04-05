@@ -10,7 +10,16 @@ namespace Exercicio02
     {
         static void Main(string[] args)
         {
-            ConversorFahrenheit.CalculoFahrenheitParaCelsius();
+            ConversorFahrenheit conversor = new ConversorFahrenheit();
+
+            Console.WriteLine("- Conversor de graus Fahrenheit para graus Celsius -\n");
+
+            Console.WriteLine("Informe os graus Fahrenheit: ");
+            conversor.Fahrenheit = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine($"\nO grau Celsius é: C° {conversor.CalculoFahrenheitParaCelsius()}");
+
+            Console.ReadKey();
         }
     }
 }

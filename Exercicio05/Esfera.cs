@@ -8,28 +8,20 @@ namespace Exercicio05
 {
     internal class Esfera
     {
-        public static double pi { get; set; }
-        public static double raio { get; set; }
-        public static double altura { get; set; }
-        public static double volume { get; set; }
+        public double pi { get; set; }
+        public double raio { get; set; }
+        public double altura { get; set; }
+        public double volume { get; set; }
 
 
-        public static void CalculoEsfera()
+        public double CalculoEsfera()
         {
             pi = 3.14;
 
-            Console.WriteLine("- Calculo volume de uma Esfera -\n");
-
-            Console.WriteLine("Informe o raio: ");
-            raio = Convert.ToDouble(Console.ReadLine());
-
             volume = (4 * pi * Math.Pow(raio, 3)) / 3;
-
             volume = Math.Round(volume, 2);
 
-            Console.WriteLine($"\nVolume da esfera é: {volume}cm");
-
-            Console.ReadKey();
+            return volume;
         }
     }
 }

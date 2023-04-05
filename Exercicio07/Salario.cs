@@ -9,30 +9,18 @@ namespace Exercicio07
     internal class Salario
     {
 
-        public static double SalarioBase { get; set; }
-        public static double TotalVendas { get; set; }
-        public static double percentual { get; set; }
-        public static double comissao { get; set; }
-        public static double SalarioFinal { get; set; }
+        public double SalarioBase { get; set; }
+        public double TotalVendas { get; set; }
+        public double percentual { get; set; }
+        public double comissao { get; set; }
+        public double SalarioFinal { get; set; }
 
-        public static void CalculoSalario()
+        public double CalculoSalario()
         {
-            Console.WriteLine("- Calculadora de salário -\n");
-
-            Console.WriteLine("Informe o salário base: ");
-            SalarioBase = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Informe o total de vendas: ");
-            TotalVendas = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Informe o total de comissão: ");
-            percentual = Convert.ToDouble(Console.ReadLine());
-
             comissao = (TotalVendas * percentual) / 100;
-
             SalarioFinal = SalarioBase + comissao;
 
-            Console.WriteLine($"O salário total do vendedor será de: {SalarioFinal}");
+            return SalarioFinal;
         }
     }
 }
